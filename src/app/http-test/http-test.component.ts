@@ -22,6 +22,7 @@ export class HttpTestComponent implements OnInit {
     this.http.get('assets/package.json')
     .subscribe((result: Response) => {
       console.log(result);
+      this.responseInfo = result["license"];
       return result;
     });
   }
