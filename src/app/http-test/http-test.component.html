@@ -1,0 +1,10 @@
+<p>
+  {{responseInfo}}
+</p>
+<!--<img src=" http://media.mw.metropolia.fi/wbma/uploads/{{imgUrl}}"/>-->
+<ul>
+  <li *ngFor="let image of images">
+    <label>{{image.title}}</label>
+    <img src="http://media.mw.metropolia.fi/wbma/uploads/{{image.filename}}"/>
+  </li>
+</ul>
