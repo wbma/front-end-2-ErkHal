@@ -18,6 +18,9 @@ export class HttpTestComponent implements OnInit {
     this.getMedia();
   }
 
+/*
+  GET the local package.json file form the directory
+*/
   getJson() {
     this.http.get('assets/package.json')
     .subscribe((result: Response) => {
@@ -27,6 +30,9 @@ export class HttpTestComponent implements OnInit {
     });
   }
 
+/*
+  GET all images from the media API
+*/
   getMedia() {
     this.http.get('http://media.mw.metropolia.fi/wbma/media')
     .subscribe((result: Response) => {
